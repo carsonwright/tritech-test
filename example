@@ -1,0 +1,42 @@
+
+
+post /organizations
+  content:
+    {
+      "name":"Pizza Shop App"
+    }
+  response example:
+    {
+      "id":"b9b05d19-d97e-4368-b568-ffaebd80053f",
+      "name":"Pizza Shop App",
+      "public_key":"WJRQ1bjhGf2Qgz+22us6eG6HoafF",
+      "private_key":"frr8WPs/SKNWJfcA/TWufRwwMH3j"
+    }
+post /users 
+  content:
+    {
+      "first_name":"John", 
+      "last_name":"doe", 
+      "email":"janedoe@example.com"
+    }
+  response: 
+    {
+      "id":"c58ea3b2-b206-4796-a49d-1635bccb9798",
+      "first_name":"John",
+      "last_name":"doe",
+      "email":"janedoe@example.com"
+    }
+
+post /users/:user_id/products
+  content: 
+    {
+      "name": "Pizza", 
+      "category":"Food"
+    }
+  response:
+    {
+      "id":"20daa858-8d73-4a97-b33e-fc7880d65c21",
+      "name":"Pizza",
+      "user_id":"c58ea3b2-b206-4796-a49d-1635bccb9798",
+      "category":"Food"
+    }
